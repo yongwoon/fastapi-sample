@@ -1,10 +1,10 @@
 FROM python:3.12-alpine
-RUN mkdir -p /var/www
 
+RUN mkdir -p /var/www/api
 RUN apk update \
   && apk add --no-cache bash vim openssh curl git
 
-WORKDIR /var/www
+WORKDIR /var/www/api
 COPY ./api/requirements.txt ./requirements.txt
 
 RUN pip install --upgrade pip \

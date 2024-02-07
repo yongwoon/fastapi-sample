@@ -11,7 +11,7 @@ services:
     volumes:
       - type: bind
         source: "./api"
-        target: "/var/www"
+        target: "/var/www/api"
     networks:
       - dev_fastapi_sample_network
 
